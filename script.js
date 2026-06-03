@@ -71,28 +71,28 @@ function initTypewriterMessage() {
 
 function initInteractiveGallery() {
     const imageCaptions = {
-        'IV/.1.png': 'Todo que ver la gorra JAJAJA',
-        'IV/.2.png': 'Ese azulito te animo a entrar a la Santa nuevamente',
-        'IV/.3.png': 'Tu viendo que nomas te andaba sacando fotos con tu azulito',
-        'IV/.4.png': 'De las veces que vamos con la misma ropa',
-        'IV/.5.png': 'Yo te dije que no creo en las brujas, pero ve ya me hiciste dudar',
-        'IV/.6.png': 'Aquí me di cuenta de que te llevabas, pero no te aguantabas',
-        'IV/.7.png': 'Casi se ve mi reflejo JAJAJ',
-        'IV/.8.png': 'Ese día no te quisiste tomar una foto conmigo, pero quedo más chida la foto así',
-        'IV/.9.png': 'La neta ya no me acuerdo de esa foto, pero la hice sticker solo que no lo he usado',
-        'IV/.10.png': 'Aquí no me acuerdo ni que onda, pero se tenia que poner la foto',
-        'IV/.11.png': 'Es que no recuerdo, pero según yo tome las fotos con tu teléfono',
-        'IV/.12.png': 'El gato tiro mas rostro que tu jajaa',
-        'IV/.13.png': 'Es que el filtro de gato es de mis fav, y quedo en la foto',
-        'IV/.14.png': 'Desde ahí algo cambio dentro de Andy, a ver si te acuerdas JAJAJ',
+        'IV/1.png': 'Todo que ver la gorra JAJAJA',
+        'IV/2.png': 'Ese azulito te animo a entrar a la Santa nuevamente',
+        'IV/3.png': 'Tu viendo que nomas te andaba sacando fotos con tu azulito',
+        'IV/4.png': 'De las veces que vamos con la misma ropa',
+        'IV/5.png': 'Yo te dije que no creo en las brujas, pero ve ya me hiciste dudar',
+        'IV/6.png': 'Aquí me di cuenta de que te llevabas, pero no te aguantabas',
+        'IV/7.png': 'Casi se ve mi reflejo JAJAJ',
+        'IV/8.png': 'Ese día no te quisiste tomar una foto conmigo, pero quedo más chida la foto así',
+        'IV/9.png': 'La neta ya no me acuerdo de esa foto, pero la hice sticker solo que no lo he usado',
+        'IV/10.png': 'Aquí no me acuerdo ni que onda, pero se tenia que poner la foto',
+        'IV/11.png': 'Es que no recuerdo, pero según yo tome las fotos con tu teléfono',
+        'IV/12.png': 'El gato tiro mas rostro que tu jajaa',
+        'IV/13.png': 'Es que el filtro de gato es de mis fav, y quedo en la foto',
+        'IV/14.png': 'Desde ahí algo cambio dentro de Andy, a ver si te acuerdas JAJAJ',
         'IV/MA.png': 'Pa que te miento ese día te cargue porque andaba contento JAJAJA',
         'IV/MAA.png': 'La verdadera primera foto que tenemos jajajaja'
     };
 
     const polaroidGroups = {
-        'img-polaroid-1': ['IV/.2.png', 'IV/.3.png', 'IV/.4.png', 'IV/.5.png', 'IV/.6.png'],
-        'img-polaroid-2': ['IV/MAA.png', 'IV/.7.png', 'IV/.8.png', 'IV/.9.png', 'IV/.10.png', 'IV/.11.png'],
-        'img-polaroid-3': ['IV/.1.png', 'IV/.12.png', 'IV/.13.png', 'IV/.14.png', 'IV/MA.png']
+        'img-polaroid-1': ['IV/2.png', 'IV/3.png', 'IV/4.png', 'IV/5.png', 'IV/6.png'],
+        'img-polaroid-2': ['IV/MAA.png', 'IV/7.png', 'IV/8.png', 'IV/9.png', 'IV/10.png', 'IV/11.png'],
+        'img-polaroid-3': ['IV/1.png', 'IV/12.png', 'IV/13.png', 'IV/14.png', 'IV/MA.png']
     };
 
     const currentIndexMap = {};
