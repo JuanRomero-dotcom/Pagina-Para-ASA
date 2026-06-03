@@ -102,7 +102,6 @@ function initInteractiveGallery() {
         const groupImages = polaroidGroups[id];
         
         if (imgElement && groupImages) {
-            imgElement.style.transition = 'opacity 0.4s ease';
             currentIndexMap[id] = 0;
 
             const container = imgElement.closest('.polaroid');
@@ -110,20 +109,15 @@ function initInteractiveGallery() {
                 container.classList.add('cursor-pointer');
 
                 container.addEventListener('click', () => {
-                    imgElement.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        currentIndexMap[id] = (currentIndexMap[id] + 1) % groupImages.length;
-                        const nextImg = groupImages[currentIndexMap[id]];
+                    currentIndexMap[id] = (currentIndexMap[id] + 1) % groupImages.length;
+                    const nextImg = groupImages[currentIndexMap[id]];
 
-                        imgElement.src = nextImg;
-                        imgElement.style.opacity = '1';
+                    imgElement.src = nextImg;
 
-                        const captionElement = container.querySelector('p');
-                        if (captionElement) {
-                            captionElement.textContent = imageCaptions[nextImg];
-                        }
-                    }, 400);
+                    const captionElement = container.querySelector('p');
+                    if (captionElement) {
+                        captionElement.textContent = imageCaptions[nextImg];
+                    }
                 });
             }
         }
