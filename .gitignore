@@ -1,0 +1,6 @@
+# Ignore system files
+Thumbs.db
+.DS_Store
+
+# Ignore Netlify folders
+.netlify/

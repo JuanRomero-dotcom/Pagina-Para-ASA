@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te quiero mucho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warm: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        },
+                        indigoSpecial: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Quicksand"', '"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen font-sans overflow-x-hidden relative selection:bg-purple-500/30">
+
+    <div id="stars-container" class="fixed inset-0 pointer-events-none z-0"></div>
+    
+    <div class="fixed top-20 left-10 text-6xl opacity-30 pointer-events-none text-white" style="animation: float 4s ease-in-out infinite;">✦</div>
+    <div class="fixed top-40 right-20 text-5xl opacity-30 pointer-events-none text-white" style="animation: float 5s ease-in-out infinite 0.5s;">✦</div>
+    <div class="fixed bottom-40 left-20 text-5xl opacity-30 pointer-events-none text-white" style="animation: float 4s ease-in-out infinite 1s;">✦</div>
+    <div class="fixed bottom-20 right-10 text-6xl opacity-30 pointer-events-none text-white" style="animation: float 5s ease-in-out infinite 1.5s;">✦</div>
+
+    <header class="relative z-10 pt-16 pb-8 text-center px-4 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">
+            Holaaa Andyyy
+        </h1>
+        <p class="text-gray-300 text-lg font-medium max-w-xl mx-auto">
+            Recuerdas que te enseñe un tiktok donde salian girasoles y fraces y asi pz se me ocurrio hacer algo parecido. La idea es simple reuni algunos momentos, bueno fotos que estan regadas en mi galeria y en nuestro converzacion en whast
+        </p>
+    </header>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-4 pb-24 space-y-20">
+
+        <section class="max-w-3xl mx-auto">
+            <div id="letter-container" class="bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-white/20 space-y-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300">
+                <div id="letter-closed" class="text-center py-8">
+                    <div class="w-20 h-20 rounded-full bg-black flex items-center justify-center text-white mx-auto mb-4">
+                        <i data-lucide="mail" class="w-10 h-10"></i>
+                    </div>
+                    <h2 class="font-black text-black text-xl mb-2">Para Ratitaaa</h2>
+                    <p class="text-black text-sm font-black">Abreme</p>
+                </div>
+                <div id="letter-open" class="hidden space-y-6">
+                    <div class="flex items-center gap-3 border-b border-gray-300 pb-4">
+                        <div>
+                            <h2 class="font-black text-black">Para Ratitaaa</h2>
+                        </div>
+                    </div>
+                    <div id="typed-text" class="text-black text-base leading-relaxed space-y-4 font-black min-h-[120px]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery-section" class="space-y-8 opacity-0" style="animation: slideInUp 0.8s ease-out 0.5s forwards;">
+            <div class="text-center">
+                <h2 class="text-2xl md:text-3xl font-bold">El problema no fue que yo tomara las fotos, sino que andabas en la lela</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                
+                <div class="polaroid bg-white/95 backdrop-blur-sm p-4 pb-6 shadow-xl rounded-sm transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 border border-gray-300 w-full max-w-[280px] group">
+                    <div class="bg-white w-full h-[280px] rounded-sm overflow-hidden flex items-center justify-center mb-4 relative">
+                        <img id="img-polaroid-1" src="IV/.2.png" alt="Foto Principal 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white p-4 text-center text-sm font-bold z-10 pointer-events-none">
+                            dale click para ver la siguiente foto
+                        </div>
+                    </div>
+                    <p class="text-black text-center text-sm font-black mt-2 px-1 min-h-[40px] flex items-center justify-center">
+                        Ese azulito te animo a entrar a la Santa nuevamente
+                    </p>
+                </div>
+
+                <div class="polaroid bg-white/95 backdrop-blur-sm p-4 pb-6 shadow-xl rounded-sm transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 border border-gray-300 w-full max-w-[280px] group">
+                    <div class="bg-white w-full h-[280px] rounded-sm overflow-hidden flex items-center justify-center mb-4 relative">
+                        <img id="img-polaroid-2" src="IV/MAA.png" alt="Foto Principal 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white p-4 text-center text-sm font-bold z-10 pointer-events-none">
+                            dale click para ver la siguiente foto
+                        </div>
+                    </div>
+                    <p class="text-black text-center text-sm font-black mt-2 px-1 min-h-[40px] flex items-center justify-center">
+                        La verdadera primera foto que tenemos jajajaja
+                    </p>
+                </div>
+
+                <div class="polaroid bg-white/95 backdrop-blur-sm p-4 pb-6 shadow-xl rounded-sm transform -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 border border-gray-300 w-full max-w-[280px] sm:col-span-2 lg:col-span-1 group">
+                    <div class="bg-white w-full h-[280px] rounded-sm overflow-hidden flex items-center justify-center mb-4 relative">
+                        <img id="img-polaroid-3" src="IV/.1.png" alt="Foto 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white p-4 text-center text-sm font-bold z-10 pointer-events-none">
+                            dale click para ver la siguiente foto
+                        </div>
+                    </div>
+                    <p class="text-black text-center text-sm font-black mt-2 px-1 min-h-[40px] flex items-center justify-center">
+                        Todo que ver la gorra JAJAJA
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="videos-section" class="space-y-8 bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/20 shadow-lg max-w-3xl mx-auto opacity-0" style="animation: slideInUp 0.8s ease-out 1s forwards;">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-1">Cuando te pones a cantar y te grabo para que no lo hagas JAJAJA</h2>
+            </div>
+
+            <div class="relative max-w-2xl mx-auto">
+                <div class="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30 aspect-video bg-neutral-950">
+                    <video id="romantic-video" class="w-full h-full object-cover" controls style="transition: opacity 0.3s ease;">
+                        <source src="IV/V2.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                    <button id="play-btn" class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+                            <i data-lucide="play" class="w-8 h-8 text-black ml-1"></i>
+                        </div>
+                    </button>
+                </div>
+
+                <button id="next-video-btn" class="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black border-none shadow-lg flex items-center justify-center text-white z-20">
+                    <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
